@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+    <RootNamespace>Toolbelt.Net.Smtp</RootNamespace>
+    <AssemblyName>Toolbelt.Net.Smtp.SmtpServerCore</AssemblyName>
+    <Version>1.0.0.2</Version>
+    <Authors>J.Sakamoto</Authors>
+    <Company />
+    <Product>SmtpServerCore</Product>
+    <Title>SmtpServerCore</Title>
+    <Copyright>Mozilla Public License, version 2.0, J.Sakamoto 2014-2017</Copyright>
+    <PackageLicenseUrl>https://github.com/jsakamoto/smtp-server-core/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jsakamoto/smtp-server-core/</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jsakamoto/smtp-server-core.git</RepositoryUrl>
+    <PackageTags>smtp,smtp server,server,mail,e-mail</PackageTags>
+    <PackageReleaseNotes>v.1.0.0.2
+- .NET Standard 2.0 / .NET Core 2.0 / .NET Framework 4.5 support.
+v.1.0.0.1
+- Beta release</PackageReleaseNotes>
+    <Description>An implementation of SMTP (Simple Mail Transfer Protocol) conversation to build SMTP service.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Toolbelt.Net.Smtp.SmtpMessage" Version="1.0.0.8" />
+  </ItemGroup>
+
+</Project>
