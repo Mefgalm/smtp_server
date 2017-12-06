@@ -24,6 +24,7 @@ namespace SmtpServerConsole
         private static void _Server_ReceiveMessage(object sender, ReceiveMessageEventArgs e)
         {
             _Messages.Add(e.Message);
+            Console.WriteLine(e.Message.Body);
         }
 
         public void Dispose()
