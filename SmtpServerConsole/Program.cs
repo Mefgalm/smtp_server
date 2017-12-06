@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using Toolbelt.Net.Smtp;
 
 namespace SmtpServerConsole
@@ -12,7 +13,7 @@ namespace SmtpServerConsole
 
         static void Main(string[] args)
         {
-            _Server = new SmtpServerCore();
+            _Server = new SmtpServerCore(IPAddress.Parse("93.190.46.156"), 25);
             _Messages = new List<SmtpMessage>();
             _Server.ReceiveMessage += _Server_ReceiveMessage;
             _Server.Start();
