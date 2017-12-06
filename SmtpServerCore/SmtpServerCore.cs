@@ -24,7 +24,7 @@ namespace Toolbelt.Net.Smtp
 
         protected List<SmtpServerSessionThread> _SessionThreads;
 
-        public SmtpServerCore() => Initialize(new[] { new IPEndPoint(IPAddress.Loopback, 25) }, null);
+        public SmtpServerCore() => Initialize(new[] { new IPEndPoint(IPAddress.Loopback, 587) }, null);
 
         public SmtpServerCore(IPAddress address, int port, IEnumerable<NetworkCredential> credentials = null) => Initialize(new[] { new IPEndPoint(address, port) }, credentials);
 
