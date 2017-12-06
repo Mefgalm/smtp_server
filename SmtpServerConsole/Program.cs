@@ -13,7 +13,7 @@ namespace SmtpServerConsole
 
         static void Main(string[] args)
         {
-            _Server = new SmtpServerCore(IPAddress.Any, 587);
+            _Server = new SmtpServerCore(IPAddress.Any, 25);
             _Messages = new List<SmtpMessage>();
             _Server.ReceiveMessage += _Server_ReceiveMessage;
             _Server.Start();
