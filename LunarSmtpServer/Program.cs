@@ -20,7 +20,7 @@ namespace LunarSmtpServer
 
             var options = new OptionsBuilder()
                 .ServerName("Lunar SmtpServer")
-                .Port(25)
+                .Port(9025)
                 .MessageStore(new SampleMessageStore())
                 .Build();
 
