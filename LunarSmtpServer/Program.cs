@@ -27,8 +27,7 @@ namespace LunarSmtpServer
             var server = new SmtpServer.SmtpServer(options);
             var serverTask = server.StartAsync(cancellationTokenSource.Token);
 
-            Console.WriteLine("Press any key to shutdown the server.");
-            Console.ReadKey();
+            Console.Read();
 
             try
             {
