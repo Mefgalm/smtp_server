@@ -27,6 +27,7 @@ namespace LunarSmtpServer
             var server = new SmtpServer.SmtpServer(options);
             var serverTask = server.StartAsync(cancellationTokenSource.Token);
 
+            Console.WriteLine("Press key");
             Console.Read();
 
             try
@@ -38,6 +39,7 @@ namespace LunarSmtpServer
             {
                 e.Handle(exception => exception is OperationCanceledException);
             }
+            Console.WriteLine("Server stopped");
         }       
     }
 
