@@ -26,14 +26,11 @@ namespace LunarSmtpServer
 
             var server = new SmtpServer.SmtpServer(options);
             var serverTask = server.StartAsync(cancellationTokenSource.Token);
-
-            Console.WriteLine("Press key");
-            Console.Read();
-
+            
             try
             {
-                cancellationTokenSource.Cancel();
                 serverTask.Wait();
+                cancellationTokenSource.Cancel();                
             }
             catch (AggregateException e)
             {
